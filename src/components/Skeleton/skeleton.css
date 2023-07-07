@@ -1,0 +1,68 @@
+.skeleton-loader {
+  --psuedo-el-display: none;
+  --base-color: #ebebeb;
+  --wave-color: rgba(0, 0, 0, 0.05);
+  --display: block;
+  position: relative;
+  display: var(--display);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: var(--base-color);
+  transform: scale(1, 0.9);
+  user-select: none;
+  line-height: 1;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton-loader::after {
+  content: "";
+  display: var(--psuedo-el-display);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    var(--base-color),
+    var(--wave-color),
+    var(--base-color)
+  );
+  transform: translateX(-100%);
+  animation: wave 1.5s linear 0.5s infinite;
+}
+
+.skeleton-loader > * {
+  visibility: hidden;
+}
+
+.skeleton-loader.circle,
+.skeleton-loader.square {
+  height: 3rem;
+  width: 3rem;
+}

@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 15rem;
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 1px 0 rgba(60, 75, 100, 0.14),
+    0 2px 1px -1px rgba(60, 75, 100, 0.12), 0 1px 3px 0 rgba(60, 75, 100, 0.2);
+}
+
+.card__description {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.card__avatar {
+  width: 3rem;
+  height: 3rem;
+}
+
+.card__thumbnail {
+  width: 15rem;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.example {
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  text-align: center;
+}
